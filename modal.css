@@ -1,0 +1,125 @@
+#modal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#imageModalContent {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
+}
+
+#newsModalContent {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
+}
+
+.source {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.articleContainer {
+    flex-basis: 40%;
+    height: 70%;
+    margin: 20px;
+}
+
+.imageContainer {
+    flex-basis: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 5% 10px 0;
+}
+
+#modalClose {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 20px;
+    border-style: none;
+    color: black;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#moreButton {
+    position: absolute;
+    bottom: 3%;
+    width: 40%;
+    left: 30%;
+    border-radius: 8px;
+    border: none;
+}
+
+@media only screen and (min-width: 400px) {
+    #newsModalContent {
+        flex-direction: row;
+        height: 50%;
+        top: 25%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #imageModalContent {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60%;
+        top: 20%;
+    }
+    .imageContainer {
+        margin: 15px 0;
+        max-height: 80%;
+    }
+    #modalClose {
+        right: 0;
+    }
+    #moreButton {
+        width: 20%;
+        left: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .articleContainer {
+        height: 50%;
+    }
+
+    #newsModalContent {
+        height: 80%;
+        top: 10%;
+    }
+}
